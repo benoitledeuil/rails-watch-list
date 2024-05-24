@@ -12,11 +12,14 @@
     <div class="pt-2 col-4">
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
         <%= link_to list.name, list_path(list), class: "text-decoration-none text-white"%>
+        <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
       </div>
     </div>
     <% end %>
   </div>
-</br>
+
+
+
 <%= link_to "Create a new list", new_list_path, class: "btn btn-primary" %>
 
 </div>
